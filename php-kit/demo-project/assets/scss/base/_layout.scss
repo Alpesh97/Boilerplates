@@ -1,0 +1,60 @@
+    html {
+        font-size: 62.5%;
+        height: auto;
+    }
+
+    body {
+        @include rem-fallback(font-size, 20);
+        line-height: 1.5;
+        overflow-x: hidden;
+        height: auto;
+        font-weight: 400;
+        font-family: $primary_font;
+        color: $primary-color;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @include bp(lg-max-mob){
+            @include rem-fallback(font-size,15);
+        }
+    }
+
+    .wrapper {
+        min-height: 100%;
+    }
+
+    a {
+        @include transition(all 0.3s);
+        font-weight: 400;
+    }
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        outline: none;
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    div {
+        box-sizing: border-box;
+    }
+
+
+/* General 
+-----------*/
+
+.container {
+    @include rem-fallback(max-width, 1440);
+    @include rem-fallback(padding, 0, 50);
+    margin: 0 auto;
+    @include bp(xxl-max-tab){
+        @include rem-fallback(padding, 0, 20);
+    }
+}
+

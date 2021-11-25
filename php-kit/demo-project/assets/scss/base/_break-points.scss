@@ -1,0 +1,245 @@
+//Break points
+@mixin bp($point) {
+    /* max-width */
+    $xl-max-mac: "(max-width: 2560px)";
+    $xlg-max-mac: "(max-width: 1920px)";
+    $xxl-max-desk: "(max-width: 1800px)";
+    $xl-max-desk: "(max-width: 1680px)";
+    $lg-max-desk: "(max-width: 1600px)";
+    $md-max-desk: "(max-width: 1440px)";
+    $sm-max-desk: "(max-width: 1366px)";
+    $xxs-max-desk: "(max-width: 1360px)";
+    $xxss-max-desk: "(max-width: 1359px)";
+    $xs-max-desk: "(max-width: 1280px)";
+    $xxl-max-tab: "(max-width: 1199px)";
+    $xl-max-tab: "(max-width: 1024px)";
+    $lg-max-tab: "(max-width: 1023px)";
+    $md-max-tab: "(max-width: 991px)";
+    $sm-max-tab: "(max-width: 850px)";
+    $xxl-max-mob: "(max-width: 767px)";
+    $xl-max-mob: "(max-width: 679px)";
+    $lg-max-mob: "(max-width: 575px)";
+    $xlg-max-mob: "(max-width: 574px)";
+    $md-max-mob: "(max-width: 480px)";
+    $mdm-max-mob: "(max-width: 479px)";
+    $sm-max-mob: "(max-width: 375px)";
+    $smx-max-mob: "(max-width: 374px)";
+    $xs-max-mob: "(max-width: 360px)";
+    $xxs-max-mob: "(max-width: 320px)";
+    $xxl-ht-max: "(max-height: 1016px)";
+    $xxl-ht-min: "(min-height: 951px)";
+    $md-ht-max: "(max-height: 935px)";
+    $xs-ht-max: "(max-height: 950px)";
+    $xl-ht-max: "(max-height: 864px)";
+    $xl-ht-min: "(min-height: 864px)";
+    $xs-ht-min: "(min-height: 800px)";
+    /* min-width*/
+    $xxl-min-desk: "(min-width: 1921px)";
+    $xl-min-desk: "(min-width: 1700px)";
+    $lg-min-desk: "(min-width: 1600px)";
+    $md-min-desk: "(min-width: 1441px)";
+    $xxl-min-tab: "(min-width: 1200px)";
+    $xl-min-tab: "(min-width: 1025px)";
+    $lg-min-tab: "(min-width: 992px)";
+    $md-min-tab: "(min-width: 768px)";
+    @if $point==xl-max-mac {
+        @media #{$xl-max-mac} {
+            @content;
+        }
+    }
+    @if $point==xlg-max-mac {
+        @media #{$xlg-max-mac} {
+            @content;
+        }
+    }
+    @else if $point==xxl-max-desk {
+        @media #{$xxl-max-desk} {
+            @content;
+        }
+    }
+    @else if $point==xl-max-desk {
+        @media #{$xl-max-desk} {
+            @content;
+        }
+    }
+    @else if $point==lg-max-desk {
+        @media #{$lg-max-desk} {
+            @content;
+        }
+    }
+    @else if $point==md-max-desk {
+        @media #{$md-max-desk} {
+            @content;
+        }
+    }
+    @else if $point==sm-max-desk {
+        @media #{$sm-max-desk} {
+            @content;
+        }
+    }
+     @else if $point==xxs-max-desk {
+        @media #{$xxs-max-desk} {
+            @content;
+        }
+    }
+    @else if $point==xxss-max-desk {
+        @media #{$xxss-max-desk} {
+            @content;
+        }
+    }
+    @else if $point==xs-max-desk {
+        @media #{$xs-max-desk} {
+            @content;
+        }
+    }
+    @else if $point==xxl-max-tab {
+        @media #{$xxl-max-tab} {
+            @content;
+        }
+    }
+    @else if $point==xl-max-tab {
+        @media #{$xl-max-tab} {
+            @content;
+        }
+    }
+    @else if $point==lg-max-tab {
+        @media #{$lg-max-tab} {
+            @content;
+        }
+    }
+    @else if $point==md-max-tab {
+        @media #{$md-max-tab} {
+            @content;
+        }
+    }
+    @else if $point==sm-max-tab {
+        @media #{$sm-max-tab} {
+            @content;
+        }
+    }
+    @else if $point==xxl-max-mob {
+        @media #{$xxl-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==xl-max-mob {
+        @media #{$xl-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==lg-max-mob {
+        @media #{$lg-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==xlg-max-mob {
+        @media #{$xlg-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==md-max-mob {
+        @media #{$md-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==mdm-max-mob {
+        @media #{$mdm-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==sm-max-mob {
+        @media #{$sm-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==smx-max-mob {
+        @media #{$smx-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==xs-max-mob {
+        @media #{$xs-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==xxs-max-mob {
+        @media #{$xxs-max-mob} {
+            @content;
+        }
+    }
+    @else if $point==xxl-min-desk {
+        @media #{$xxl-min-desk} {
+            @content;
+        }
+    }
+    @else if $point==xl-min-desk {
+        @media #{$xl-min-desk} {
+            @content;
+        }
+    }
+    @else if $point==lg-min-desk {
+        @media #{$lg-min-desk} {
+            @content;
+        }
+    }
+    @else if $point==md-min-desk {
+        @media #{$md-min-desk} {
+            @content;
+        }
+    }
+    @else if $point==xxl-min-tab {
+        @media #{$xxl-min-tab} {
+            @content;
+        }
+    }
+    @else if $point==xl-min-tab {
+        @media #{$xl-min-tab} {
+            @content;
+        }
+    }
+    @else if $point==lg-min-tab {
+        @media #{$lg-min-tab} {
+            @content;
+        }
+    }
+    @else if $point==md-min-tab {
+        @media #{$md-min-tab} {
+            @content;
+        }
+    }
+    @else if $point==xs-ht-max {
+        @media #{$xs-ht-max} {
+            @content;
+        }
+    }
+    @else if $point==xs-ht-min {
+        @media #{$xs-ht-min} {
+            @content;
+        }
+    }
+    @else if $point==xl-ht-min {
+        @media #{$xl-ht-min} {
+            @content;
+        }
+    }
+    @else if $point==xl-ht-max {
+        @media #{$xl-ht-max} {
+            @content;
+        }
+    }
+    @else if $point==xxl-ht-min {
+        @media #{$xxl-ht-min} {
+            @content;
+        }
+    }
+    @else if $point==xxl-ht-max {
+        @media #{$xxl-ht-max} {
+            @content;
+        }
+    }
+    @else if $point==md-ht-max {
+        @media #{$md-ht-max} {
+            @content;
+        }
+    }
+}

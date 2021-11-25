@@ -1,0 +1,134 @@
+.table {
+    thead th,
+    td,
+    th {
+        border-top: none;
+        border-bottom: 1px solid $primary-color;
+    }
+}
+
+.table-analyst {
+    @include rem-px(margin-bottom, 28);
+    @include rem-px(font-size, 16);
+    td, th {
+        width: 50%;
+        @include rem-px(padding, 5, 4);
+    }
+    @include bp(sm-max) {
+        @include rem-px(font-size, 14);
+    }
+}
+
+.glossary-conversation {
+    .table {
+        @include rem-px(font-size, 14);
+        @include rem-px(line-height,19);
+        margin-bottom: 0;
+        tbody{
+            tr{
+                &:last-child{
+                    td{
+                       // @include rem-px(padding-bottom, 15);
+                   }
+               }
+           }
+       }
+       th,
+       td {
+        @include rem-px(padding, 2, 4);
+    }
+    td:first-of-type:not(:last-child) {
+        font-weight: 600;
+    }
+    tr {
+    }
+    &.last-border {
+     tr {
+        &:last-child {
+            td {
+                border-bottom: 1px solid $primary-color;
+            }
+        }
+    } 
+}
+caption{
+    &:last-child{
+            //@include rem-px(margin-bottom, 15);
+        }
+    }
+}
+.column-stacks{
+    column-count: 2;
+    @include bp(sm-max) {
+        margin-bottom: 0;
+        column-count: 1;
+        column-gap: 0;
+    }
+    .table{
+        break-inside: avoid-column;
+    }
+    .cms-content{
+        break-inside: avoid-column;
+        @include bp(sm-max) {
+            margin-bottom: 0;
+            column-count: 1;
+            column-gap: 0;
+        }
+    }
+}
+.table-border {
+    border-top: 1px solid $primary-color;
+    @include bp(md-max) {
+        border-top: none;
+    }
+    @include bp(sm-max) {
+        margin-bottom: 0;
+    }
+}
+.caption {
+    display: table-caption;
+    text-align: left;
+    padding: 0.75rem;
+    caption-side: top;
+    background-color: $primary-color;
+    color: $white;
+}
+.table td:first-of-type:not(:last-child) {
+    width: 30%;
+    @include bp(md-max) {
+        width: 25%;
+    }
+}
+#collapseThree .table td:first-of-type:not(:last-child) {
+    width: 135px;
+    @include bp(sm-max) {
+        width: 100px;
+    }
+}
+@include bp(sm-max) {
+    .comp__accordion-block .card-body-outer {
+        padding: 1.2rem 1.2rem 19px;
+    }
+}
+}
+
+.SPE-reserve {
+    h6,
+    p {
+        font-size: 1.4rem;
+        line-height: 19px;
+    }
+}
+
+.glossary-conversation .comp__accordion-block .card-body-outer > .row >div:first-of-type > .table-border {
+    @include bp(sm-max){
+        border-top: 1px solid $primary-color;
+    }
+}
+
+
+.glossary-conversation .column-stacks{
+    table{
+        margin-bottom: 15px;
+    }
+}

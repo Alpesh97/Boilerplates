@@ -1,0 +1,75 @@
+//break points
+$mdc-layout-grid-breakpoints: (
+  largedesktop: 1600px,
+  desktop: 1200px,
+  tablet: 768px,
+  largephone: 576px,
+  phone: 0px
+  );
+
+
+//Break points
+@mixin bp($point) {
+    $xxxxxs-max: '(max-width: 345px)';
+    $xxxxs-max: '(max-width: 359px)';
+    $xxxs-max: '(max-width: 374px)';
+    $xxs-max: '(max-width: 480px)';
+    $xs-max: '(max-width: 575px)';
+    $sm-max: '(max-width: 767px)';
+    $md-max: '(max-width: 1023px)';
+    $tablet-landscape: '(max-width: 1024px)';
+    $md-min: '(min-width: 1023px)';
+    $lg-max: '(max-width: 1199px)';
+    $xlg-max: '(max-width: 1599px)';
+    @if $point==xxxxxs-max {
+        @media #{$xxxxxs-max} {
+            @content;
+        }
+    }
+    @else if $point==xxxs-max {
+        @media #{$xxxs-max} {
+            @content;
+        }
+    }@else if $point==xxxxs-max {
+        @media #{$xxxxs-max} {
+            @content;
+        }
+    }
+    @else if $point==xxs-max {
+        @media #{$xxs-max} {
+            @content;
+        }
+    } @else if $point==xs-max {
+        @media #{$xs-max} {
+            @content;
+        }
+    } @else if $point==sm-max {
+        @media #{$sm-max} {
+            @content;
+        }
+    } @else if $point==md-max {
+        @media #{$md-max} {
+            @content;
+        }
+    } @else if $point==tablet-landscape {
+        @media #{$tablet-landscape} {
+            @content;
+        }
+    } @else if $point==lg-max {
+        @media #{$lg-max} {
+            @content;
+        }
+    } @else if $point==xlg-max {
+        @media #{$xlg-max} {
+            @content;
+        }
+    } @else if $point==xxxs-min {
+        @media #{$xxxs-min} {
+            @content;
+        }
+    } @else if $point==md-min {
+        @media #{$md-min} {
+            @content;
+        }
+    }
+}

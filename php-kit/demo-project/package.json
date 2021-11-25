@@ -1,0 +1,29 @@
+{
+  "name": "your-website-name",
+  "version": "1.0.0",
+  "description": "Your website desctiption",
+  "main": "gulpfile.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bower-existed-scanner": "0.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minifier": "^1.2.2",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-watch": "^5.0.0",
+    "gulp-watch-sequence": "^1.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "devDependencies": {
+    "dropkickjs": "^2.2.4"
+  }
+}

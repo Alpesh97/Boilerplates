@@ -1,0 +1,68 @@
+::-moz-selection {
+	color: $white;
+	background: $black;
+	
+}
+
+::selection {
+	color: $white;
+	background: $black;
+}
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+}
+
+body {
+	@include rem-fallback(font-size, 14);
+	@include rem-fallback(line-height, 18);
+	overflow-x:hidden;
+	color: $black;
+	height: 100%;
+	font-family: sans-serif;
+	font-weight: 300;
+	background: $white;
+	
+	-webkit-font-smoothing: subpixel-antialiased;
+	&.menu_open {
+		overflow: hidden;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none;
+}
+
+:focus {
+	outline: 0;
+}
+button{
+	border:0;
+}
+button:focus {
+	outline: 0;
+}
+
+.btn:focus,
+.btn.focus {
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.btn-link:focus, .btn-link:hover {
+	background-color: inherit;
+	text-decoration: underline;
+}
+
+.wrapper {
+	min-height: 100%;
+}
+
+
+a {
+	@include transition(all 0.3s);
+}

@@ -1,0 +1,13 @@
+/* General 
+--------------------------------------------------------------------------------------------------------*/
+html { min-height: 100%; }
+body { font-family: 'Open Sans', sans-serif; min-height: 100%; margin: 0; padding: 0; font-size: 18px; line-height: 1.67; color: #333; background-color: #062039; }
+.wrapper { min-height: 100vh; }
+.container { max-width: 1390px; width: 100%; margin: 0 auto; padding: 0 25px; }
+h1 { font-size: 55px; line-height: 1.2; text-shadow: 0 0 10px rgba(0, 0, 0, 0.41); font-weight: 300; font-family: 'Roboto', sans-serif; color: #fff; }
+h2 { font-size: 42px; line-height: 1.2; font-weight: 300; font-family: 'Roboto', sans-serif; color: #0b2e58; }
+h3 { font-size: 24px; line-height: 1.2; font-weight: 400; font-family: 'Roboto', sans-serif; color: #333; }
+.btn { font-size: 16px; line-height: 50px; font-weight: 500; font-family: 'Roboto', sans-serif; height: 50px; padding: 0 25px; text-align: center; min-width: 128px; background-color: #fa8502; color: #fff; border: 2px solid #fa8502; }
+.btn.sm { height: 40px; line-height: 40px; }
+.btn:hover, .btn:focus { background-color: transparent; color: #fa8502; }
+.whitebox-container { max-width: 1340px; background: #fff; padding: 80px 100px; margin: 0 auto; width: 100%; }

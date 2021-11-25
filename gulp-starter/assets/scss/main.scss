@@ -1,0 +1,23 @@
+// Core Bootstrap Files
+@import "base/fonts";
+
+// Vendor
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "vendor/vendor";
+
+// Base
+@import "base/colors";
+@import "base/break-points";
+@import "base/mixins";
+@import "base/typography";
+@import "base/layout";
+
+// Modules
+// @import "modules/accordion";
+
+// Component
+@import "components/header";
+@import "components/footer";
+@import "components/form-element";
+@import "components/banner";
+@import "components/home";

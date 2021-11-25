@@ -1,0 +1,529 @@
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @include rem-fallback(font-size, 16);
+    color: $primary-color;
+    font-family: $primary-font;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    @include rem-fallback(max-width, 1024);
+    margin: 0 auto;
+    height: 100%;
+}
+
+.inner-container {
+    @include rem-fallback(max-width, 767);
+    margin: 0 auto;
+    @include rem-fallback(padding, 0, 38);
+    overflow-x: hidden;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.mdc-form-control {
+    width: 100%;
+    @include rem-fallback(margin-bottom, 15);
+
+    &.mdc-text-field {
+        background-color: transparent;
+
+        .mdc-floating-label {
+            @include rem-fallback(font-size, 16);
+            line-height: normal;
+            color: $primary-color;
+            @include rem-fallback(left, 0);
+            @include rem-fallback(top, 35);
+            @include transition(all 0.3s);
+
+            &.mdc-floating-label--float-above {
+                @include rem-fallback(top, 15);
+                @include rem-fallback(font-size, 14);
+                transform: none;
+                @include transition(all 0.3s);
+                color: rgba(180, 187, 204, 0.5);
+            }
+        }
+
+        input {
+            @include rem-fallback(font-size, 16);
+            line-height: 1.5;
+            color: $primary-color;
+            border-bottom: 1px solid $gray-shade1 !important;
+            background-color: transparent;
+            @include rem-fallback(padding-left, 0);
+            @include rem-fallback(padding-right, 30);
+            caret-color: $primary-color;
+            overflow: hidden;
+            margin: 0;
+
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid $gray-shade1 !important;
+            }
+        }
+
+        .mdc-text-field__icon {
+            display: block;
+            position: absolute;
+            @include rem-fallback(right, 7);
+            @include rem-fallback(bottom, -1);
+        }
+
+        &:after,
+        &:before {
+            opacity: 0;
+        }
+    }
+
+    &.mdc-text-field--invalid {
+        input {
+            border-bottom: 1px solid $red-shade1 !important;
+
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid $red-shade1 !important;
+            }
+        }
+
+        .mdc-text-field__icon {
+            svg {
+                g {
+                    fill: $red-shade1;
+                }
+            }
+        }
+
+        +.error-msg {
+            display: block;
+        }
+    }
+}
+
+#button-background {
+    position: relative;
+    background-color: $gray-shade2;
+    margin: 15px auto 25px;
+    border: $gray-shade2;
+    @include rem-fallback(height, 50);
+    @include rem-fallback(border-radius, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    max-width: 100%;
+
+    #slider {
+        transition: width 0.3s, border-radius 0.3s, height 0.3s;
+        position: absolute;
+        @include rem-fallback(left, 0);
+        background-color: $pink-color;
+        @include rem-fallback(width, 146);
+        height: 100%;
+        @include rem-fallback(border-radius, 25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &#locker {
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: $white;
+        }
+
+        &.unlocked {
+            @include transition(all 0.3s);
+            left: 100% !important;
+            @include translateX(-100%);
+        }
+    }
+
+    .sign-in-btn {
+        position: relative;
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 0 24px;
+        font-family: $primary-font;
+        @include rem-fallback(font-size, 16);
+        font-weight: 500;
+        color: $white;
+
+        &:before {
+            position: absolute;
+            background: url('../images/icon-btnarrow.svg') no-repeat center;
+            content: "";
+            @include rem-fallback(width, 28);
+            @include rem-fallback(height, 20);
+            @include rem-fallback(right, 0);
+            top: 50%;
+            @include translateY(-50%);
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+
+    .error-msg {
+        position: absolute;
+        @include rem-fallback(bottom, 0);
+        @include rem-fallback(padding-top, 8);
+        @include rem-fallback(font-size, 12);
+        color: $red-shade1;
+        font-family: $primary-font;
+        display: none;
+    }
+
+    input {
+        @include rem-fallback(padding-bottom, 0);
+        @include rem-fallback(font-size, 15);
+        height: auto;
+    }
+
+    input[type="pasword"] {
+        @include rem-fallback(font-size, 20);
+    }
+
+    &.mdc-text-field--invalid {
+        input {
+            border-bottom: 1px solid $red-shade1 !important;
+
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid $red-shade1 !important;
+            }
+        }
+
+        .mdc-text-field {
+            border-bottom: 1px solid transparent !important;
+            overflow: hidden;
+
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent !important;
+            }
+
+            .mdc-floating-label {
+                color: $red-shade1;
+            }
+        }
+
+        .mdc-text-field__icon {
+            svg {
+                g {
+                    fill: $red-shade1;
+                }
+            }
+        }
+
+        .error-msg {
+            display: block;
+        }
+    }
+}
+
+.app-dialog {
+    h2 {
+        @include rem-fallback(font-size, 16);
+        @include rem-fallback(line-height, 19);
+        font-weight: 500;
+    }
+
+    p {
+        @include rem-fallback(font-size, 14);
+        line-height: 1.29;
+    }
+}
+
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-width: 7px 7px 0px;
+    border-style: solid;
+    border-color: #ec1212 transparent transparent;
+
+    &.green-triangle {
+        border-color: #03b415 transparent transparent;
+    }
+
+    &.red-triangle {
+        border-color: #ec1212 transparent transparent;
+    }
+}
+
+.mdc-button {
+    &.btn-primary {
+        &:not(:disabled) {
+            background-color: $pink-color;
+            @include rem-fallback(border-radius, 20);
+            @include rem-fallback(padding, 11, 21);
+            @include rem-fallback(margin-bottom, 5);
+            height: auto;
+            opacity: 0.9;
+
+            span {
+                @include rem-fallback(font-size, 16);
+                font-weight: 500;
+                font-family: $primary-font;
+                color: rgba(255, 255, 255, 0.87);
+                text-transform: none;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+/*******************/
+/* Chart css strat */
+/*******************/
+.chart-main {
+    background: #f4f6fa;
+}
+
+.chart-bar-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 0;
+
+    .bar-chart {
+        @include rem-fallback(width, 475);
+        @include rem-fallback(height, 289);
+        @include rem-fallback(padding, 5, 0, 0);
+    }
+}
+
+#chartjs-tooltip {
+    opacity: 1;
+    position: absolute;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    pointer-events: none;
+    font-family: $primary-font;
+    z-index: 9;
+}
+
+#doughnut-chartjs-tooltip {
+    opacity: 1;
+    position: absolute;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    pointer-events: none;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    font-family: $primary-font;
+}
+
+.tooltip-wrapper {
+    .inner-wrapper {
+        position: relative;
+        box-sizing: border-box;
+        background: #ffffff;
+        box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.22);
+        @include rem-fallback(border-radius, 3);
+        @include rem-fallback(padding, 7, 15);
+        font-family: $primary-font;
+
+        &:after {
+            content: "";
+            position: absolute;
+            @include rem-fallback(width, 0);
+            @include rem-fallback(height, 0);
+            @include rem-fallback(bottom, -5);
+            left: 50%;
+            @include translateX(-50%);
+            box-sizing: border-box;
+            border: 5px solid $black;
+            border-color: transparent transparent #ffffff #ffffff;
+            @include rotate(-45deg);
+            box-shadow: -7px 6px 9px 0 rgba(0, 0, 0, 0.07);
+        }
+
+        .tooltip-lable {
+            text-align: center;
+            color: $primary-color;
+            @include rem-fallback(font-size, 12);
+            @include rem-fallback(letter-spacing, 0.19);
+            font-weight: 500;
+            font-family: $primary-font;
+
+            span {
+                @include rem-fallback(letter-spacing, 0.19);
+                font-family: $primary-font;
+                display: block;
+                text-align: center;
+                @include rem-fallback(font-size, 12);
+                color: $gray-shade1;
+                font-weight: normal;
+            }
+
+            .bullet-span {
+                position: absolute;
+                @include rem-fallback(width, 10);
+                @include rem-fallback(height, 10);
+                border-radius: 50%;
+                @include rem-fallback(top, 3);
+                left: 0;
+            }
+        }
+    }
+}
+
+.chartjs-tooltip-key {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.doughnut-chart {
+    &.with-legends {
+        width: auto;
+        height: auto;
+        @include rem-fallback(max-width, 450);
+        margin: 0 auto;
+
+        .custom-legends {
+            margin: 0 auto 37px;
+            @include rem-fallback(height, 230);
+            @include rem-fallback(width, 230);
+        }
+
+        .legend-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            @include rem-fallback(padding, 0, 10);
+            @include rem-fallback(max-width, 360);
+            margin: 0 auto;
+
+            li {
+                flex: 0 0 50%;
+                max-width: 50%;
+                position: relative;
+                @include rem-fallback(padding, 0, 15, 0, 24);
+                @include rem-fallback(margin, 0, 0, 18, 0);
+                @include rem-fallback(font-size, 12);
+                font-family: $primary-font;
+                color: $black;
+                line-height: 1.33;
+
+                @include bp(xxxxs-max) {
+                    @include rem-fallback(padding, 0, 10, 0, 24);
+                }
+
+                &.highlight-legend {
+                    font-weight: 700;
+
+                    .data-percentage {
+                        font-weight: 700;
+                    }
+                }
+
+                .data-percentage {
+                    @include rem-fallback(font-size, 12);
+                    color: $gray-shade5;
+                    font-weight: 300;
+                }
+
+                .bullet-span {
+                    position: absolute;
+                    left: 0;
+                    @include rem-fallback(width, 10);
+                    @include rem-fallback(height, 10);
+                    border-radius: 50%;
+                    @include rem-fallback(top, 3);
+                    @include rem-fallback(left, 0);
+                }
+            }
+        }
+    }
+
+    &.with-tooltip {
+        .custom-tooltip {
+            @include rem-fallback(height, 230);
+            @include rem-fallback(width, 230);
+            margin: 0 auto;
+
+            .inner-wrapper {
+                @include rem-fallback(padding-left, 24);
+                @include rem-fallback(min-width, 134);
+                text-align: left;
+
+                .tooltip-lable {
+                    text-align: left;
+
+                    .bullet-span {
+                        @include rem-fallback(top, 8);
+                        @include rem-fallback(left, 9);
+                    }
+
+                    .data-percentage {
+                        @include rem-fallback(font-size, 12);
+                        color: $gray-shade1;
+                        font-weight: 300;
+                    }
+                }
+
+                &:after {
+                    left: 43%;
+                    border: 11px solid $black;
+                    border-color: transparent transparent #ffffff #ffffff;
+                }
+            }
+        }
+    }
+}
+
+/*****************/
+/* Chart css end */
+/*****************/
+
+
+/* notification css start */
+button {
+    &.mdc-tab {
+        margin-top: 5px;
+    }
+}
+
+
+/* notification css end */
+
+/* Search placeholder css strat */
+
+.foodcostr-autocomplete{
+    &::-webkit-input-placeholder {
+        color: $gray-shade1 !important;
+        @include rem-fallback(font-size,18);
+    }
+    &::-moz-placeholder {
+        color: $gray-shade1 !important;
+        @include rem-fallback(font-size,18);
+    }
+    &:-ms-input-placeholder {
+        color: $gray-shade1 !important;
+        @include rem-fallback(font-size,18);
+    }
+    &:-moz-placeholder {
+        color: $gray-shade1 !important;
+        @include rem-fallback(font-size,18);
+    }
+}
+
+/* Search placeholder css end */
